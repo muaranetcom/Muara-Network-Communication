@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tutorial - Muara Network Communication</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0; padding: 30px 20px;
+    background-color: #1c1c1c;
+    color: #f2f2f2;
+    text-align: center;
+  }
+  header {
+    background-color: #000;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  header img {
+    height: 60px;
+    animation: spin 10s linear infinite;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  header img:hover {
+    animation-play-state: paused;
+    transform: scale(1.2);
+  }
+  @keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }
+  nav {
+    background-color: #800000;
+    padding: 12px 0;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  nav a {
+    color: #f2f2f2;
+    margin: 0 18px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 8px 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  nav a:hover, nav a.active {
+    background-color: #f2f2f2;
+    color: #800000;
+  }
+  nav a.active {
+    background-color: #f2f2f2;
+    color: #800000;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #2c2c2c;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px 5px rgba(128,0,0,0.7);
+  }
+  h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #f79c9c;
+  }
+  .video-container {
+    margin-bottom: 40px;
+  }
+  video {
+    width: 100%;
+    max-width: 840px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  }
+  .pdf-download {
+    margin-top: 30px;
+  }
+  .pdf-download a {
+    color: #f99;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  .pdf-download a:hover {
+    color: #fff;
+  }
+  footer {
+    background-color: #000;
+    color: #800000;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.9rem;
+    letter-spacing: 1.2px;
+    margin-top: 60px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Logo Muara Network Communication" />
+  <div>
+    <h1>Muara Network Communication</h1>
+  </div>
+</header>
+
+<nav>
+  <a href="index.html">Beranda</a>
+  <a href="layanan.html">Layanan</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="tutorial.html" class="active">Tutorial</a>
+</nav>
+
+<div class="container">
+  <h2>Tutorial Instalasi dan Maintenance Jaringan</h2>
+  
+  <div class="video-container">
+    <video controls poster="video-poster.jpg">
+      <source src="tutorial-video.mp4" type="video/mp4" />
+      Browser Anda tidak mendukung tag video.
+    </video>
+  </div>
+  
+  <div class="pdf-download">
+    <a href="tutorial-document.pdf" target="_blank" rel="noopener">Download Panduan Tutorial (PDF)</a>
+  </div>
+</div>
+
+<footer>
+  &copy; 2023 Muara Network Communication. Semua hak dilindungi.
+</footer>
+
+</body>
+</html>
