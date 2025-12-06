@@ -1,221 +1,204 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Muara Network Communication - Jaringan Telekomunikasi Terpercaya</title>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Muara Network Communication - Jaringan Telekomunikasi Terpercaya</title>
+  <style>
     body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #dc3545; /* Latar belakang merah */
-        color: #333;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background-color: #1c1c1c; /* abu sangat gelap */
+      color: #f2f2f2; /* putih lembut */
     }
     header {
-        background-color: #000; /* Hitam supaya logo merah terlihat */
-        color: white;
-        padding: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
+      background-color: #000; /* hitam agar logo merah kontras */
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
     }
-    /* Animasi logo berputar */
     @keyframes spin {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
+      from { transform: rotate(0deg);}
+      to { transform: rotate(360deg);}
     }
     header img {
-        height: 60px;
-        width: auto;
-        display: block;
-        animation: spin 10s linear infinite;
-        cursor: pointer;
-        transition: transform 0.3s ease;
+      height: 60px;
+      width: auto;
+      display: block;
+      animation: spin 10s linear infinite;
+      cursor: pointer;
+      transition: transform 0.3s ease;
     }
     header img:hover {
-        animation-play-state: paused;
-        transform: scale(1.2);
+      animation-play-state: paused;
+      transform: scale(1.2);
     }
     header div {
-        text-align: left;
+      text-align: left;
     }
     nav {
-        background-color: #8b1e2a;
-        padding: 10px;
-        text-align: center;
+      background-color: #800000; /* merah gelap */
+      padding: 12px 0;
+      text-align: center;
     }
     nav a {
-        color: white;
-        margin: 0 15px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: background-color 0.3s ease, color 0.3s ease;
-        padding: 8px 12px;
-        border-radius: 4px;
+      color: #f2f2f2;
+      margin: 0 18px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 8px 14px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
     nav a:hover {
-        background-color: white;
-        color: #b02a37;
-        text-decoration: none;
+      background-color: #f2f2f2;
+      color: #800000;
+      text-decoration: none;
     }
     .container {
-        max-width: 1200px;
-        margin: 20px auto;
-        padding: 20px;
-        background-color: white;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 25px 35px;
+      background-color: #2c2c2c; /* abu gelap */
+      border-radius: 10px;
+      box-shadow: 0 0 20px 5px #80000099;
+      color: #f0eaea;
     }
     .hero {
-        text-align: center;
-        padding: 50px 0;
-        background-image: url('https://source.unsplash.com/featured/?network,telecommunication');
-        background-size: cover;
-        color: white;
-        border-radius: 8px;
-        text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+      text-align: center;
+      padding: 60px 15px;
+      border-radius: 12px;
+      background: url('https://source.unsplash.com/featured/?network,telecommunication') no-repeat center center/cover;
+      color: white;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
     }
     .hero h1 {
-        font-size: 2.5em;
-        margin-bottom: 10px;
+      font-size: 2.7rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    section h2 {
+      color: #f79c9c; /* merah muda lembut */
+      font-weight: 600;
+      font-size: 2rem;
+      margin-bottom: 18px;
+      border-bottom: 2px solid #800000;
+      padding-bottom: 6px;
+    }
+    section p {
+      color: #ddd;
+      font-size: 1.1rem;
+      line-height: 1.6;
     }
     .services {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin: 20px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 30px;
     }
-    /* Hover zoom dan shadow layanan */
     .service {
-        width: 30%;
-        padding: 20px;
-        background-color: #f8d7da;
-        margin: 10px;
-        border-radius: 8px;
-        text-align: center;
-        box-shadow: 0 0 5px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        cursor: pointer;
+      background-color: #800000dd;
+      width: 30%;
+      padding: 25px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px 2px #800000bb;
+      margin-bottom: 25px;
+      color: #f5d4d4;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
     }
     .service:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 15px rgba(176, 42, 55, 0.5);
-        z-index: 10;
+      transform: scale(1.07);
+      box-shadow: 0 0 18px 6px #f79c9cbb;
+      color: #fff;
     }
-    @media (max-width: 768px) {
-        .service {
-            width: 100%;
-        }
-    }
-    /* Fade-in saat scroll */
-    .fade-in {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 1s ease-out, transform 1s ease-out;
-    }
-    .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
+    @media screen and (max-width: 960px) {
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+      .service {
+        width: 80%;
+      }
     }
     footer {
-        background-color: #b02a37;
-        color: white;
-        text-align: center;
-        padding: 10px;
-        margin-top: 20px;
+      background-color: #000;
+      color: #800000;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 0.9rem;
+      letter-spacing: 1.2px;
+      margin-top: 40px;
     }
-</style>
+  </style>
 </head>
 <body>
-<header>
+  <header>
     <img src="logo.png" alt="Logo Muara Network Communication" />
     <div>
-        <h1>Muara Network Communication</h1>
-        <p>Solusi Jaringan Telekomunikasi Terdepan untuk Bisnis Anda</p>
+      <h1>Muara Network Communication</h1>
+      <p>Solusi Jaringan Telekomunikasi Terdepan untuk Bisnis Anda</p>
     </div>
-</header>
+  </header>
 
-<nav>
+  <nav>
     <a href="#home">Beranda</a>
     <a href="#about">Tentang Kami</a>
     <a href="#services">Layanan</a>
     <a href="#contact">Kontak</a>
     <a href="portfolio.html">Portfolio</a>
-</nav>
+  </nav>
 
-<div class="container">
-    <section id="home" class="hero fade-in">
-        <h1>Selamat Datang di Muara Network Communication</h1>
-        <p>Kami menyediakan layanan jaringan telekomunikasi berkualitas tinggi, termasuk instalasi fiber optic, VPN, dan dukungan teknis 24/7.</p>
+  <div class="container">
+    <section id="home" class="hero">
+      <h1>Selamat Datang di Muara Network Communication</h1>
+      <p>Kami menyediakan layanan jaringan telekomunikasi berkualitas tinggi, termasuk instalasi fiber optic, VPN, dan dukungan teknis 24/7.</p>
     </section>
 
-    <section id="about" class="fade-in">
-        <h2>Tentang Kami</h2>
-        <p>Muara Network Communication adalah perusahaan terkemuka di bidang jaringan telekomunikasi. Dengan pengalaman lebih dari 10 tahun, kami berkomitmen untuk memberikan solusi inovatif dan andal untuk kebutuhan konektivitas bisnis Anda. Tim ahli kami siap membantu Anda membangun infrastruktur jaringan yang efisien dan aman.</p>
+    <section id="about">
+      <h2>Tentang Kami</h2>
+      <p>Muara Network Communication adalah perusahaan terkemuka di bidang jaringan telekomunikasi. Dengan pengalaman lebih dari 10 tahun, kami berkomitmen untuk memberikan solusi inovatif dan andal untuk kebutuhan konektivitas bisnis Anda. Tim ahli kami siap membantu Anda membangun infrastruktur jaringan yang efisien dan aman.</p>
     </section>
 
-    <section id="services" class="fade-in">
-        <h2>Layanan Kami</h2>
-        <div class="services">
-            <div class="service">
-                <h3>Instalasi Jaringan</h3>
-                <p>Pemasangan dan konfigurasi jaringan telekomunikasi, termasuk fiber optic dan wireless.</p>
-            </div>
-            <div class="service">
-                <h3>Dukungan Teknis</h3>
-                <p>Layanan pemeliharaan dan troubleshooting 24/7 untuk memastikan jaringan Anda selalu berjalan lancar.</p>
-            </div>
-            <div class="service">
-                <h3>Konsultasi dan Desain</h3>
-                <p>Perencanaan dan desain jaringan khusus sesuai kebutuhan bisnis Anda.</p>
-            </div>
+    <section id="services">
+      <h2>Layanan Kami</h2>
+      <div class="services">
+        <div class="service">
+          <h3>Instalasi Jaringan</h3>
+          <p>Pemasangan dan konfigurasi jaringan telekomunikasi, termasuk fiber optic dan wireless.</p>
         </div>
+        <div class="service">
+          <h3>Dukungan Teknis</h3>
+          <p>Layanan pemeliharaan dan troubleshooting 24/7 untuk memastikan jaringan Anda selalu berjalan lancar.</p>
+        </div>
+        <div class="service">
+          <h3>Konsultasi dan Desain</h3>
+          <p>Perencanaan dan desain jaringan khusus sesuai kebutuhan bisnis Anda.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="fade-in">
-        <h2>Kontak Kami</h2>
-        <p>Alamat: Jl. Telekomunikasi No. 123, Jakarta, Indonesia</p>
-        <p>Email: info@muaranetwork.com</p>
-        <p>Telepon: +62 21 1234 5678</p>
-        <p>Ikuti kami di media sosial untuk update terbaru!</p>
+    <section id="contact">
+      <h2>Kontak Kami</h2>
+      <p>Alamat: Jl. Telekomunikasi No. 123, Jakarta, Indonesia</p>
+      <p>Email: info@muaranetwork.com</p>
+      <p>Telepon: +62 21 1234 5678</p>
+      <p>Ikuti kami di media sosial untuk update terbaru!</p>
     </section>
-</div>
+  </div>
 
-<footer>
+  <footer>
     <p>&copy; 2023 Muara Network Communication. Semua hak dilindungi.</p>
-</footer>
-
-<script>
-    // Smooth scroll
-    document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', e => {
-            e.preventDefault();
-            const target = document.querySelector(anchor.getAttribute('href'));
-            if(target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-            } else {
-                window.location.href = anchor.getAttribute('href');
-            }
-        });
-    });
-
-    // Fade-in saat scroll
-    function onScrollFade() {
-        const elements = document.querySelectorAll('.fade-in');
-        const windowBottom = window.innerHeight + window.scrollY;
-
-        elements.forEach(el => {
-            if(el.offsetTop < windowBottom - 100){
-                el.classList.add('visible');
-            }
-        });
-    }
-
-    window.addEventListener('scroll', onScrollFade);
-    window.addEventListener('load', onScrollFade);
-</script>
-
+  </footer>
 </body>
 </html>
