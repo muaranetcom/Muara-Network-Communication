@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Muara Network Communication - Layanan</title>
 <style>
@@ -49,7 +49,11 @@
     border-radius: 4px;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
-  nav a:hover {
+  nav a:hover, nav a.active {
+    background-color: #f2f2f2;
+    color: #800000;
+  }
+  nav a.active {
     background-color: #f2f2f2;
     color: #800000;
   }
@@ -100,44 +104,42 @@
 </style>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Logo Muara Network Communication" />
-    <div>
-      <h1>Muara Network Communication</h1>
+<header>
+  <img src="logo.png" alt="Logo Muara Network Communication" />
+  <div>
+    <h1>Muara Network Communication</h1>
+  </div>
+</header>
+
+<nav>
+  <a href="index.html">Beranda</a>
+  <a href="layanan.html" class="active">Layanan</a>
+  <a href="portfolio.html">Portfolio</a>
+</nav>
+
+<div class="container">
+  <h2>Berikut ini bidang layanan dan jasa yang dapat kami berikan.</h2>
+
+  <div class="services-grid">
+    <div class="service-item">
+      <div class="service-image-wrapper" title="Instalasi dan Maintenance Jaringan VSAT">
+        <img src="vsat.jpg" alt="Instalasi dan Maintenance Jaringan VSAT" />
+      </div>
+      <div class="service-caption">Instalasi dan Maintenance Jaringan VSAT</div>
     </div>
-  </header>
-  
-  <nav>
-    <a href="index.html">Beranda</a>
-    <a href="layanan.html" style="background-color:#f2f2f2; color:#800000; border-radius:5px;">Layanan</a>
-    <a href="portfolio.html">Portfolio</a>
-  </nav>
-  
-  <div class="container">
-    <h2>Berikut ini bidang layanan dan jasa yang dapat kami berikan.</h2>
-    
-    <div class="services-grid">
-      <div class="service-item">
-        <div class="service-image-wrapper" title="Instalasi dan Maintenance Jaringan Vsat">
-          <img src="vsat.jpg" alt="Instalasi dan Maintenance Jaringan Vsat" />
-        </div>
-        <div class="service-caption">Instalasi dan Maintenance Jaringan Vsat</div>
+    <div class="service-item">
+      <div class="service-image-wrapper" title="Instalasi dan Maintenance Starlink">
+        <img src="starlink.jpg" alt="Instalasi dan Maintenance Starlink" />
       </div>
-      
-      <div class="service-item">
-        <div class="service-image-wrapper" title="Instalasi dan Maintenance Starlink">
-          <img src="starlink.jpg" alt="Instalasi dan Maintenance Starlink" />
-        </div>
-        <div class="service-caption">Instalasi dan Maintenance Starlink</div>
+      <div class="service-caption">Instalasi dan Maintenance Starlink</div>
+    </div>
+    <div class="service-item">
+      <div class="service-image-wrapper" title="Instalasi dan Maintenance CCTV">
+        <img src="cctv.jpg" alt="Instalasi dan Maintenance CCTV" />
       </div>
-      
-      <div class="service-item">
-        <div class="service-image-wrapper" title="Instalasi dan Maintenance CCTV">
-          <img src="cctv.jpg" alt="Instalasi dan Maintenance CCTV" />
-        </div>
-        <div class="service-caption">Instalasi dan Maintenance CCTV</div>
-      </div>
+      <div class="service-caption">Instalasi dan Maintenance CCTV</div>
     </div>
   </div>
+</div>
 </body>
 </html>
