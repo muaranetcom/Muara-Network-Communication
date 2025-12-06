@@ -71,35 +71,20 @@
     font-weight: 600;
     color: #f79c9c;
   }
-  .video-container {
-    margin-bottom: 40px;
+  .pdf-container {
+    margin-bottom: 30px;
+    text-align: left;
   }
-  video {
+  .pdf-container h3 {
+    margin-bottom: 10px;
+    color: #f2f2f2;
+  }
+  iframe.pdf-viewer {
     width: 100%;
-    max-width: 840px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(255,255,255,0.3);
-  }
-  .pdf-download {
-    margin-top: 30px;
-  }
-  .pdf-download a {
-    color: #f99;
-    text-decoration: underline;
-    font-weight: bold;
-    font-size: 1.1rem;
-  }
-  .pdf-download a:hover {
-    color: #fff;
-  }
-  footer {
-    background-color: #000;
-    color: #800000;
-    text-align: center;
-    padding: 15px 10px;
-    font-size: 0.9rem;
-    letter-spacing: 1.2px;
-    margin-top: 60px;
+    height: 600px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
   }
 </style>
 </head>
@@ -120,18 +105,26 @@
 </nav>
 
 <div class="container">
-  <h2>Tutorial Instalasi dan Maintenance Jaringan</h2>
+  <h2>Tutorial dan Panduan</h2>
   
-  <div class="video-container">
-    <video controls poster="video-poster.jpg">
-      <source src="tutorial-video.mp4" type="video/mp4" />
-      Browser Anda tidak mendukung tag video.
-    </video>
+  <!-- PDF 1 -->
+  <div class="pdf-container">
+    <h3>Panduan Instalasi VSAT MDM2010 JONSA 0.97M</h3>
+    <iframe class="pdf-viewer" src="pdfs/Panduan Instalasi VSAT MDM2010 JONSA 0.97M.pdf#toolbar=0&navpanes=0&scrollbar=0" aria-label="Panduan Instalasi VSAT MDM2010 JONSA 0.97M"></iframe>
   </div>
   
-  <div class="pdf-download">
-    <a href="tutorial-document.pdf" target="_blank" rel="noopener">Download Panduan Tutorial (PDF)</a>
+  <!-- PDF 2 -->
+  <div class="pdf-container">
+    <h3>Panduan Instalasi Starlink</h3>
+    <iframe class="pdf-viewer" src="pdfs/instalasi-starlink.pdf#toolbar=0&navpanes=0&scrollbar=0" aria-label="Panduan Instalasi Starlink"></iframe>
   </div>
+
+  <!-- PDF 3 -->
+  <div class="pdf-container">
+    <h3>Panduan Maintenance CCTV</h3>
+    <iframe class="pdf-viewer" src="pdfs/maintenance-cctv.pdf#toolbar=0&navpanes=0&scrollbar=0" aria-label="Panduan Maintenance CCTV"></iframe>
+  </div>
+  
 </div>
 
 <footer>
