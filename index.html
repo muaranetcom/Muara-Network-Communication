@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Muara Network Communication - Layanan</title>
+<title>Muara Network Communication - Beranda</title>
 <style>
   body {
     font-family: Arial, sans-serif;
-    margin: 0; padding: 40px 20px;
-    background-color: #b22222;
-    color: #fff;
-    text-align: center;
+    margin: 0; padding: 0;
+    background-color: #1c1c1c;
+    color: #f2f2f2;
   }
   header {
     background-color: #000;
@@ -31,8 +30,11 @@
     transform: scale(1.2);
   }
   @keyframes spin {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
+    from { transform: rotate(0deg);}
+    to { transform: rotate(360deg);}
+  }
+  header div {
+    text-align: left;
   }
   nav {
     background-color: #800000;
@@ -44,92 +46,95 @@
     margin: 0 18px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1rem;
     padding: 8px 14px;
     border-radius: 4px;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
-  nav a:hover, nav a.active {
-    background-color: #f2f2f2;
-    color: #800000;
-  }
-  nav a.active {
+  nav a:hover {
     background-color: #f2f2f2;
     color: #800000;
   }
   .container {
     max-width: 1100px;
+    margin: 30px auto;
+    padding: 25px 35px;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 5px #80000099;
+    color: #f0eaea;
+  }
+  .hero {
+    text-align: center;
+    padding: 60px 15px;
+    border-radius: 12px;
+    background: url('https://source.unsplash.com/featured/?network,telecommunication') no-repeat center center/cover;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+  }
+  .hero h1 {
+    font-size: 2.7rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
     margin: 0 auto;
   }
-  h2 {
-    margin-bottom: 40px;
+  section h2 {
+    color: #f79c9c;
     font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 18px;
+    border-bottom: 2px solid #800000;
+    padding-bottom: 6px;
   }
-  .services-grid {
+  section p {
+    color: #ddd;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  .services {
     display: flex;
-    justify-content: center;
-    gap: 60px;
     flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
   }
-  .service-item {
-    max-width: 280px;
-  }
-  .service-image-wrapper {
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
-    border: 10px solid #8b0000;
-    overflow: hidden;
-    margin: 0 auto 20px;
-    box-shadow: 0 0 15px rgba(139,0,0,0.6);
+  .service {
+    background-color: #800000dd;
+    width: 30%;
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px #800000bb;
+    margin-bottom: 25px;
+    color: #f5d4d4;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    transition: transform 0.3s ease;
-    background-color: #fff;
   }
-  .service-image-wrapper:hover {
-    transform: scale(1.05);
-  }
-  .service-image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  .service-caption {
-    font-weight: bold;
-    font-size: 1.05rem;
+  .service:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 18px 6px #f79c9cbb;
     color: #fff;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
   }
-  /* Responsivitas untuk HP */
-  @media (max-width: 768px) {
-    .services-grid {
-      gap: 30px;
+  @media screen and (max-width: 960px) {
+    .services {
+      flex-direction: column;
+      align-items: center;
     }
-    .service-item {
-      max-width: 200px;
-    }
-    .service-image-wrapper {
-      width: 200px;
-      height: 200px;
-      border: 8px solid #8b0000;
-    }
-    .service-caption {
-      font-size: 1rem;
+    .service {
+      width: 80%;
     }
   }
-  @media (max-width: 480px) {
-    .service-item {
-      max-width: 150px;
-    }
-    .service-image-wrapper {
-      width: 150px;
-      height: 150px;
-      border: 6px solid #8b0000;
-    }
-    .service-caption {
-      font-size: 0.9rem;
-    }
+  footer {
+    background-color: #000;
+    color: #800000;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.9rem;
+    letter-spacing: 1.2px;
+    margin-top: 40px;
   }
 </style>
 </head>
@@ -138,39 +143,57 @@
   <img src="logo.png" alt="Logo Muara Network Communication" />
   <div>
     <h1>Muara Network Communication</h1>
+    <p>Solusi Jaringan Telekomunikasi Terdepan untuk Bisnis Anda</p>
   </div>
 </header>
 
 <nav>
   <a href="index.html">Beranda</a>
-  <a href="layanan.html" class="active">Layanan</a>
+  <a href="layanan.html">Layanan</a>
   <a href="portfolio.html">Portfolio</a>
   <a href="tutorial.html">Tutorial</a>
 </nav>
 
 <div class="container">
-  <h2>Berikut ini bidang layanan dan jasa yang dapat kami berikan.</h2>
+  <section id="home" class="hero">
+    <h1>Selamat Datang di Muara Network Communication</h1>
+    <p>Kami menyediakan layanan jaringan telekomunikasi berkualitas tinggi, termasuk instalasi fiber optic, VPN, dan dukungan teknis 24/7.</p>
+  </section>
 
-  <div class="services-grid">
-    <div class="service-item">
-      <div class="service-image-wrapper" title="Instalasi dan Maintenance Jaringan VSAT">
-        <img src="vsat.jpg" alt="Instalasi dan Maintenance Jaringan VSAT" />
+  <section id="about">
+    <h2>Tentang Kami</h2>
+    <p>Berdiri pada April 2025, dengan kemauan kuat dan tinggi untuk kepuasan pelanggan, PT MUARA NETWORK COMMUNICATION dianggap dan juga menandai sejarah baru dalam bisnis di bidang Teknologi Informasi dan Telekomunikasi. Kami menyediakan sumber daya manusia yang handal untuk mendukung kelancaran usaha klien kami di seluruh Indonesia.</p>
+  </section>
+
+  <section id="services">
+    <h2>Layanan Kami</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Instalasi Jaringan</h3>
+        <p>Pemasangan dan konfigurasi jaringan telekomunikasi, termasuk fiber optic dan wireless.</p>
       </div>
-      <div class="service-caption">Instalasi dan Maintenance Jaringan VSAT</div>
-    </div>
-    <div class="service-item">
-      <div class="service-image-wrapper" title="Instalasi dan Maintenance Starlink">
-        <img src="starlink.jpg" alt="Instalasi dan Maintenance Starlink" />
+      <div class="service">
+        <h3>Dukungan Teknis</h3>
+        <p>Layanan pemeliharaan dan troubleshooting 24/7 untuk memastikan jaringan Anda selalu berjalan lancar.</p>
       </div>
-      <div class="service-caption">Instalasi dan Maintenance Starlink</div>
-    </div>
-    <div class="service-item">
-      <div class="service-image-wrapper" title="Instalasi dan Maintenance CCTV">
-        <img src="cctv.jpg" alt="Instalasi dan Maintenance CCTV" />
+      <div class="service">
+        <h3>Konsultasi dan Desain</h3>
+        <p>Perencanaan dan desain jaringan khusus sesuai kebutuhan bisnis Anda.</p>
       </div>
-      <div class="service-caption">Instalasi dan Maintenance CCTV</div>
     </div>
-  </div>
+  </section>
+
+  <section id="contact">
+    <h2>Kontak Kami</h2>
+    <p>Alamat: Jl. Telekomunikasi No. 123, Jakarta, Indonesia</p>
+    <p>Email: info@muaranetwork.com</p>
+    <p>Telepon: +62 21 1234 5678</p>
+    <p>Ikuti kami di media sosial untuk update terbaru!</p>
+  </section>
 </div>
+
+<footer>
+  <p>&copy; 2023 Muara Network Communication. Semua hak dilindungi.</p>
+</footer>
 </body>
 </html>
