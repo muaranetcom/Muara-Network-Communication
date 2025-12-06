@@ -71,6 +71,15 @@
     font-weight: 600;
     color: #f79c9c;
   }
+  .video-container {
+    margin-bottom: 40px;
+  }
+  video {
+    width: 100%;
+    max-width: 840px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  }
   .pdf-container {
     margin-bottom: 30px;
     text-align: left;
@@ -85,6 +94,29 @@
     border: none;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  }
+  /* Responsivitas untuk HP */
+  @media (max-width: 768px) {
+    iframe.pdf-viewer {
+      height: 400px;
+    }
+    video {
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 480px) {
+    iframe.pdf-viewer {
+      height: 300px;
+    }
+  }
+  footer {
+    background-color: #000;
+    color: #800000;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.9rem;
+    letter-spacing: 1.2px;
+    margin-top: 60px;
   }
 </style>
 </head>
@@ -105,12 +137,19 @@
 </nav>
 
 <div class="container">
-  <h2>Tutorial dan Panduan</h2>
+  <h2>Tutorial Instalasi dan Maintenance Jaringan</h2>
+  
+  <div class="video-container">
+    <video controls poster="video-poster.jpg">
+      <source src="tutorial-video.mp4" type="video/mp4" />
+      Browser Anda tidak mendukung tag video.
+    </video>
+  </div>
   
   <!-- PDF 1 -->
   <div class="pdf-container">
-    <h3>Panduan Seting POE Router GWN</h3>
-    <iframe class="pdf-viewer" src="Panduan Seting POE Router GWN.pdf#toolbar=0&navpanes=0&scrollbar=0" aria-label="Panduan Seting POE Router GWN"></iframe>
+    <h3>Panduan Instalasi Jaringan VSAT</h3>
+    <iframe class="pdf-viewer" src="pdfs/instalasi-vsat.pdf#toolbar=0&navpanes=0&scrollbar=0" aria-label="Panduan Instalasi Jaringan VSAT"></iframe>
   </div>
   
   <!-- PDF 2 -->
@@ -133,5 +172,3 @@
 
 </body>
 </html>
-
-
